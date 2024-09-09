@@ -4,7 +4,7 @@ import { WsServer } from "./modules/WsServer";
 import { NetMessages } from "./game_config";
 import { GameRoom } from "./GameRoom";
 
-export function GameServer(server_port: number, step_world_rate = 60, rate_socket = 60 / 30) {
+export function GameServer(server_port: number) {
     const rooms: { [k: string]: IBaseRoom } = {};
     const data_sessions: { [k: string]: any } = {};
     let id_user_counter = 0;
